@@ -69,7 +69,7 @@ public class WheelsScript : MonoBehaviour
             suspensionForce = (springForce + damperForce) * transform.up;
 
             wheelVelocityLS = transform.InverseTransformDirection(rb.GetPointVelocity(hit.point));
-            fX = Input.GetAxis("Vertical") * 0.5f * springForce;
+            fX = Input.GetAxis("Vertical") * 0.3f * springForce;
             fY = wheelVelocityLS.x * springForce;
 
             damperForce = damperStiffness * springVelocity;

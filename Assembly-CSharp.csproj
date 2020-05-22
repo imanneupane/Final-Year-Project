@@ -65,6 +65,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
+    <Compile Include="Assets\Scripts\FinishLineSc.cs" />
+    <Compile Include="Assets\Scripts\OffTrack.cs" />
+    <Compile Include="Assets\Scripts\WheelRotation.cs" />
     <Compile Include="Assets\Scripts\WheelsScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Raii007/Documents/Final Year Project/FinalYearProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
