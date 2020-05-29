@@ -56,7 +56,6 @@ public class WheelsScript : MonoBehaviour
         Debug.DrawRay(transform.position, -transform.up * (springLength + wheelRadius), Color.green);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, maximumL + wheelRadius))
