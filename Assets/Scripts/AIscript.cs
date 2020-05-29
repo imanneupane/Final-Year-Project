@@ -30,6 +30,7 @@ public class AIscript : MonoBehaviour
     {
         ApplySteer();
         Drive();
+        FollowWaypoint();
     }
 
     private void ApplySteer()
@@ -44,5 +45,20 @@ public class AIscript : MonoBehaviour
     {
         wheelFL.motorTorque = 1000f;
         wheelFR.motorTorque = 1000f;
+    }
+
+    private void FollowWaypoint()
+    {
+        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 0.5f)
+        {
+            if (currentNode == nodes.Count - 1)
+            {
+                currentNode = 0;
+            }
+            else
+            {
+                currentNode++;
+            }
+        }
     }
 }
