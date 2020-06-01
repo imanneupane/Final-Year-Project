@@ -7,6 +7,7 @@ public class Countdown : MonoBehaviour
     public int counter;
     public Text countText;
     public WheelsScript[] wheelMovement;
+    public AIscript bot;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Countdown : MonoBehaviour
         {
             w.enabled = false;
         }
+
     }
 
     IEnumerator CountdownToStart()
@@ -38,6 +40,7 @@ public class Countdown : MonoBehaviour
         {
             w.enabled = true;
         }
+        bot.enabled = true;
     }    
 
 }
