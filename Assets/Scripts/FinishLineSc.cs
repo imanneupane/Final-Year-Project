@@ -8,6 +8,7 @@ public class FinishLineSc : MonoBehaviour
     public CarController movement;
     public WheelsScript[] wheelMovement;
     public Text finishtxt;
+
     void OnCollisionEnter(Collision collisionInfo)
     {
         if (collisionInfo.collider.name == "FinishLine")

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Track
+  - Destroyable
+  - Extension
   layers:
   - Default
   - TransparentFX

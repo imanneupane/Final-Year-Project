@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NewFinishLine.cs" />
     <Compile Include="Assets\Scripts\AIfinishLn.cs" />
     <Compile Include="Assets\Scripts\AIscript.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
