@@ -10573,6 +10573,10 @@ MonoBehaviour:
   maxSteerAngle: 90
   wheelFL: {fileID: 1139425323}
   wheelFR: {fileID: 1965751570}
+  maxMotorTorque: 900
+  currentSpeed: 0
+  maxSpeed: 100
+  centerOfMass: {x: 0, y: 0, z: 0}
 --- !u!138 &1421969301
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -13013,6 +13017,7 @@ MonoBehaviour:
   - {fileID: 432911242}
   - {fileID: 2096422286}
   bot: {fileID: 1421969300}
+  bot2: {fileID: 0}
 --- !u!1001 &1904671100
 PrefabInstance:
   m_ObjectHideFlags: 0

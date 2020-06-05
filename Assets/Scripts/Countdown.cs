@@ -9,6 +9,7 @@ public class Countdown : MonoBehaviour
     public Text countText;
     public WheelsScript[] wheelMovement;
     public AIscript bot;
+    public AIscript bot2;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class Countdown : MonoBehaviour
             w.enabled = true;
         }
         bot.enabled = true;
+        bot2.enabled = true;
     }    
 
 }

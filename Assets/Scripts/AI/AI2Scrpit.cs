@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIscript : MonoBehaviour
+public class AI2script : MonoBehaviour
 {
     public Transform track;
     public float maxSteerAngle = 45f;
@@ -11,16 +11,10 @@ public class AIscript : MonoBehaviour
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
 
-    public float maxMotorTorque = 800f;
-    public float currentSpeed;
-    public float maxSpeed = 100f;
-    public Vector3 centerOfMass;
-
     private List<Transform> nodes;
     private int currentNode = 0;
     void Start()
     {
-        GetComponent<Rigidbody>().centerOfMass = centerOfMass;
         Transform[] pathTransforms = track.GetComponentsInChildren<Transform>();
 
         nodes = new List<Transform>();
@@ -53,19 +47,8 @@ public class AIscript : MonoBehaviour
 
     private void Drive()
     {
-        currentSpeed = 2 * Mathf.PI * wheelFL.radius * wheelFL.rpm * 60 / 1000;
-
-        if (currentSpeed < maxSpeed)
-        {
-            wheelFL.motorTorque = maxMotorTorque;
-            wheelFR.motorTorque = maxMotorTorque;
-        }
-        else
-        {
-            wheelFL.motorTorque = 0;
-            wheelFR.motorTorque = 0;
-        }
-        
+        wheelFL.motorTorque = 1000f;
+        wheelFR.motorTorque = 1000f;
     }
 
     private void FollowWaypoint()
@@ -82,5 +65,4 @@ public class AIscript : MonoBehaviour
             }
         }
     }
-
 }
