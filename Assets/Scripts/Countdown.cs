@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour
 {
+    public LapTimer timer;
     public int counter;
     public Text countText;
     public WheelsScript[] wheelMovement;
@@ -35,6 +36,7 @@ public class Countdown : MonoBehaviour
 
         countText.text = "START";
         yield return new WaitForSeconds(1f);
+        timer.BeginTimer();
         countText.gameObject.SetActive(false);
         foreach (WheelsScript w in wheelMovement)
         {

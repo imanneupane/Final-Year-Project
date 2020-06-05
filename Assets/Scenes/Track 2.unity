@@ -7849,6 +7849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39eb12184e82d89419922d144cd2d0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 886032552}
   counter: 3
   countText: {fileID: 1885427679}
   wheelMovement:

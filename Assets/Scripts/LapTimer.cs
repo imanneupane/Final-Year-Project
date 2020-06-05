@@ -6,17 +6,12 @@ using UnityEngine.UI;
 
 public class LapTimer : MonoBehaviour
 {
-    public static LapTimer instance;
     public Text timeCount;
 
     private TimeSpan timeStart;
     private bool timeGo;
     private float elapsedTime;
 
-    private void Awake()
-    {
-        
-    }
     void Start()
     {
         timeCount.text = "Time: 00.00.00";
