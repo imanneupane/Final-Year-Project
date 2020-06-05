@@ -10,7 +10,7 @@ public class NewFinishLine : MonoBehaviour
     public GameObject trackExtra;
     void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.name == "FinishLine")
+        if (collisionInfo.collider.name == "LapSwitch")
         {
             trackExtension.SetActive(true);
             wallAppear.SetActive(true);

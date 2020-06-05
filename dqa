@@ -1,0 +1,89 @@
+[33mcommit 12116c5b37917c8b0180aee604a9ccc5ae78636a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri Jun 5 14:08:45 2020 +0100
+
+    Added Visual objects in track 1 and 2.
+
+[33mcommit 9e8622ab9705e5b7bd8a451145f9a1263e2d6143[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri Jun 5 13:18:45 2020 +0100
+
+    Changes made to track 1 and fixed bugs (Exception Handling)
+
+[33mcommit ba8614b04435206d35f4771339beec8d107b76f9[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri Jun 5 04:18:32 2020 +0100
+
+    Added timer to the record the time.
+
+[33mcommit bcc6c56c156d37785c31e801c9ee9b4c22f8d0c8[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri Jun 5 04:09:45 2020 +0100
+
+    AI follows the pathing after track change.
+
+[33mcommit c7d072e90fa608772cddd78ea19892dba91ad207[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Thu Jun 4 22:58:41 2020 +0100
+
+    Adding track extension. Amending AI evolution to adapt ot track change.
+
+[33mcommit c44439f078215576cdd6dc4c4514eff78abbf6a4[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Mon Jun 1 21:38:06 2020 +0100
+
+    Added finishline text. modified AI bot behaviour.
+
+[33mcommit 2fae21f79798d84440ba02788e50a9463fa3c36e[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri May 29 14:30:29 2020 +0100
+
+    Bug Fixed and added followwaypoint for bot
+
+[33mcommit 60b1b42bfeba6c108ba63d9361f704a454d0dc20[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri May 29 01:11:14 2020 +0100
+
+    Error bot movement
+
+[33mcommit 28c7822741a06c3ad101f1ed5f8bdb7da2559c69[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Sun May 24 23:38:35 2020 +0100
+
+    Setting the waypoint to add AI
+
+[33mcommit d6d3c3d5028eb24ead6db72b917320cc5f9813f1[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Sat May 23 21:03:07 2020 +0100
+
+    Added the timer countdown before the start.
+
+[33mcommit 57abd07d6448d590ee4736e2eb29c341e6bb8c41[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Fri May 22 17:03:10 2020 +0100
+
+    Amended the tracks and car transformation and added more funcationality of car.
+
+[33mcommit 442663f0b6e1892a49642b539c7dc00b7271f401[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Wed May 20 23:11:54 2020 +0100
+
+    Added camera follow to the car.
+
+[33mcommit 7b2a8b04e622861ba9c8eb68f74291924b521490[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Tue May 19 13:48:37 2020 +0100
+
+    Created the model for a car.
+
+[33mcommit 0a152f727b401f0a160ae345868a38fb789ec8e0[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Tue May 12 14:27:29 2020 +0100
+
+    Starting to build the car model.
+
+[33mcommit 8d7a2152ece771b7c37975ddee5742db71792936[m
+Author: Iman <rai.dilungchha@live.com>
+Date:   Sun May 10 16:37:45 2020 +0100
+
+    made a git repository.

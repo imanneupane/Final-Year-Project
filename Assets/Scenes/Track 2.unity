@@ -725,8 +725,8 @@ GameObject:
   - component: {fileID: 83922673}
   - component: {fileID: 83922674}
   - component: {fileID: 83922675}
-  - component: {fileID: 83922681}
   - component: {fileID: 83922676}
+  - component: {fileID: 83922681}
   - component: {fileID: 83922680}
   - component: {fileID: 83922679}
   - component: {fileID: 83922678}
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 83922671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 860d821ac353beb48876fd4576537715, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c4e24c0480a18e49a7389b82f55bdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheels:
@@ -802,7 +802,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 83922671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c6d6c70ba23c448b16be3623de9478, type: 3}
+  m_Script: {fileID: 11500000, guid: 348432899e397ba468bfb52f0af37bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheelMovement:
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 83922671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd5473f9ce17604db137da8ba5b7ff8, type: 3}
+  m_Script: {fileID: 11500000, guid: 56fd2411f8cff2a43872ad90af88a762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finishLine: {fileID: 137404146}
@@ -890,7 +890,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 83922671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4eb74cc68e08f64c839abb983da93fa, type: 3}
+  m_Script: {fileID: 11500000, guid: a6681ff615ed3c440a6fe405131e9fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trackExtension: {fileID: 316611083}
@@ -1290,7 +1290,6 @@ GameObject:
   - component: {fileID: 138089654}
   - component: {fileID: 138089653}
   - component: {fileID: 138089657}
-  - component: {fileID: 138089658}
   m_Layer: 0
   m_Name: TyreFR
   m_TagString: Untagged
@@ -1387,18 +1386,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &138089658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138089652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &140584431
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 399602053}
+  - component: {fileID: 399602054}
   m_Layer: 0
   m_Name: TrackEvolution
   m_TagString: Untagged
@@ -3194,6 +3182,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &399602054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399602052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3867179f541e54388cfa6732178795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathcolour: {r: 0.990566, g: 0.97654855, b: 0.97654855, a: 0}
 --- !u!1001 &402465606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3534,7 +3535,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 432911240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a079b4e22fe3a49b13cc4f8a317638, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c418caa5eed4db43bc06c057725c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheelFrontL: 0
@@ -3546,7 +3547,7 @@ MonoBehaviour:
   damperStiffness: 4000
   springStiffness: 30000
   steerAngle: 0
-  steerTime: 0
+  steerTime: 8
   wheelRadius: 0.2
 --- !u!1 &453966269
 GameObject:
@@ -3931,7 +3932,6 @@ GameObject:
   - component: {fileID: 509196131}
   - component: {fileID: 509196130}
   - component: {fileID: 509196134}
-  - component: {fileID: 509196135}
   m_Layer: 0
   m_Name: TyreBL
   m_TagString: Untagged
@@ -4028,18 +4028,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &509196135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509196129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &511773034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6530,7 +6518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312, y: 196}
+  m_AnchoredPosition: {x: -316, y: 175}
   m_SizeDelta: {x: 274.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886032550
@@ -6582,7 +6570,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 886032548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a9150e8afce94443a27d5d4af34be4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 08ab2567a7d34ba4bbe8f28e6fa9ac55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeCount: {fileID: 886032550}
@@ -6993,7 +6981,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 926920124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a079b4e22fe3a49b13cc4f8a317638, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c418caa5eed4db43bc06c057725c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheelFrontL: 0
@@ -7297,7 +7285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 863c0ab98fe293645a567b5b4f401bde, type: 3}
+  m_Script: {fileID: 11500000, guid: abb9f1b46a797434bb94bf3ab934cf2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 83922672}
@@ -7618,7 +7606,6 @@ GameObject:
   - component: {fileID: 1006395512}
   - component: {fileID: 1006395511}
   - component: {fileID: 1006395510}
-  - component: {fileID: 1006395509}
   m_Layer: 0
   m_Name: TyreFL
   m_TagString: Untagged
@@ -7640,18 +7627,6 @@ Transform:
   m_Father: {fileID: 1263086442}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1006395509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006395507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1006395510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8275,7 +8250,6 @@ GameObject:
   - component: {fileID: 1093847346}
   - component: {fileID: 1093847345}
   - component: {fileID: 1093847349}
-  - component: {fileID: 1093847350}
   m_Layer: 0
   m_Name: TyreBR
   m_TagString: Untagged
@@ -8372,18 +8346,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1093847350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093847344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1100694718
 GameObject:
   m_ObjectHideFlags: 0
@@ -9720,7 +9682,6 @@ GameObject:
   - component: {fileID: 1283526546}
   - component: {fileID: 1283526545}
   - component: {fileID: 1283526544}
-  - component: {fileID: 1283526543}
   m_Layer: 0
   m_Name: TyreFR
   m_TagString: Untagged
@@ -9742,18 +9703,6 @@ Transform:
   m_Father: {fileID: 1263086442}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1283526543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283526541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1283526544
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10600,7 +10549,6 @@ GameObject:
   - component: {fileID: 1421969302}
   - component: {fileID: 1421969301}
   - component: {fileID: 1421969300}
-  - component: {fileID: 1421969307}
   - component: {fileID: 1421969306}
   m_Layer: 0
   m_Name: AIcar
@@ -10618,7 +10566,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421969299}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb48db09695fb4e48a8326f568936456, type: 3}
+  m_Script: {fileID: 11500000, guid: d9c1f753d8c3b754f8d5ea66e1bb6bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   track: {fileID: 1968013286}
@@ -10690,28 +10638,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1421969299}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd1162c4c8f22604d8ed2867fdb57d81, type: 3}
+  m_Script: {fileID: 11500000, guid: f7f19f1526ad10a418328968f288ae2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trackEvolve: {fileID: 399602053}
-  maxSteerAngle: 60
+  maxSteerAngle: 90
   wheelFL: {fileID: 1139425323}
   wheelFR: {fileID: 1965751570}
---- !u!114 &1421969307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421969299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd5473f9ce17604db137da8ba5b7ff8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finishLine: {fileID: 137404146}
-  changePath: {fileID: 1421969306}
-  currentPath: {fileID: 1421969300}
 --- !u!54 &1421969308
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10982,7 +10915,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515918399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a079b4e22fe3a49b13cc4f8a317638, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c418caa5eed4db43bc06c057725c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheelFrontL: 1
@@ -11733,7 +11666,6 @@ GameObject:
   - component: {fileID: 1655111963}
   - component: {fileID: 1655111962}
   - component: {fileID: 1655111966}
-  - component: {fileID: 1655111967}
   m_Layer: 0
   m_Name: TyreFL
   m_TagString: Untagged
@@ -11830,18 +11762,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1655111967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1655111961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1665327644
 GameObject:
   m_ObjectHideFlags: 0
@@ -11855,7 +11775,6 @@ GameObject:
   - component: {fileID: 1665327649}
   - component: {fileID: 1665327648}
   - component: {fileID: 1665327647}
-  - component: {fileID: 1665327646}
   m_Layer: 0
   m_Name: TyreBR
   m_TagString: Untagged
@@ -11877,18 +11796,6 @@ Transform:
   m_Father: {fileID: 1263086442}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1665327646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665327644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1665327647
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12326,8 +12233,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718686233}
-  - component: {fileID: 1718686235}
-  - component: {fileID: 1718686234}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -12358,42 +12263,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1718686234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718686232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c6d6c70ba23c448b16be3623de9478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wheelMovement:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &1718686235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718686232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c40a5e4375cb4074dbd9d322724602c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movement: {fileID: 0}
-  wheelMovement:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  finishtxt: {fileID: 0}
 --- !u!1 &1732187711
 GameObject:
   m_ObjectHideFlags: 0
@@ -13132,7 +13001,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1885427677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39eb12184e82d89419922d144cd2d0d7, type: 3}
+  m_Script: {fileID: 11500000, guid: d872e4c6e521ee343aab76790416e8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 886032552}
@@ -13428,10 +13297,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1968013284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0ee19c8e841a442bac7e62697b3c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b3867179f541e54388cfa6732178795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathcolour: {r: 1, g: 1, b: 1, a: 1}
+  pathcolour: {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &1968013286
 Transform:
   m_ObjectHideFlags: 0
@@ -13556,7 +13425,6 @@ GameObject:
   - component: {fileID: 2017464104}
   - component: {fileID: 2017464103}
   - component: {fileID: 2017464101}
-  - component: {fileID: 2017464102}
   m_Layer: 0
   m_Name: TyreBL
   m_TagString: Untagged
@@ -13580,18 +13448,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2017464102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017464100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014876a21efc41346ae0a608ca412c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &2017464103
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14022,7 +13878,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2096422284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a079b4e22fe3a49b13cc4f8a317638, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c418caa5eed4db43bc06c057725c4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wheelFrontL: 0
@@ -14034,7 +13890,7 @@ MonoBehaviour:
   damperStiffness: 4000
   springStiffness: 30000
   steerAngle: 0
-  steerTime: 0
+  steerTime: 8
   wheelRadius: 0.2
 --- !u!1001 &2100019638
 PrefabInstance:
