@@ -63,13 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NewFinishLine.cs" />
     <Compile Include="Assets\Scripts\AIfinishLn.cs" />
+    <Compile Include="Assets\Scripts\AIpathChange.cs" />
     <Compile Include="Assets\Scripts\AIscript.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
     <Compile Include="Assets\Scripts\Countdown.cs" />
     <Compile Include="Assets\Scripts\FinishLineSc.cs" />
+    <Compile Include="Assets\Scripts\LapSwitchScr.cs" />
+    <Compile Include="Assets\Scripts\LapTimer.cs" />
+    <Compile Include="Assets\Scripts\NewFinishLine.cs" />
     <Compile Include="Assets\Scripts\OffTrack.cs" />
     <Compile Include="Assets\Scripts\TrackPath.cs" />
     <Compile Include="Assets\Scripts\WheelRotation.cs" />

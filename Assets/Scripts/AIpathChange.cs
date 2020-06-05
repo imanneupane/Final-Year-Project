@@ -2,29 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIscript : MonoBehaviour
+public class AIpathChange : MonoBehaviour
 {
-    public Transform track;
-    //public Transform trackEvolve;
+    public Transform trackEvolve;
     public float maxSteerAngle = 45f;
 
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
 
-    private List<Transform> nodes;
+    private List<Transform> updatenodes;
     private int currentNode = 0;
     void Start()
     {
-        Transform[] pathTransforms = track.GetComponentsInChildren<Transform>();
+        Transform[] pathTransforms = trackEvolve.GetComponentsInChildren<Transform>();
 
-        nodes = new List<Transform>();
+        updatenodes = new List<Transform>();
 
 
         for (int i = 0; i < pathTransforms.Length; i++)
         {
-            if (pathTransforms[i] != track.transform)
+            if (pathTransforms[i] != trackEvolve.transform)
             {
-                nodes.Add(pathTransforms[i]);
+                updatenodes.Add(pathTransforms[i]);
             }
         }
     }
@@ -36,10 +35,10 @@ public class AIscript : MonoBehaviour
         FollowWaypoint();
     }
 
-    
+
     private void ApplySteer()
     {
-        Vector3 relativeVector = transform.InverseTransformPoint(nodes[currentNode].position);
+        Vector3 relativeVector = transform.InverseTransformPoint(updatenodes[currentNode].position);
         float newSteer = (relativeVector.x / relativeVector.magnitude) * maxSteerAngle;
         wheelFL.steerAngle = newSteer;
         wheelFR.steerAngle = newSteer;
@@ -47,15 +46,15 @@ public class AIscript : MonoBehaviour
 
     private void Drive()
     {
-        wheelFL.motorTorque = 1000f;
-        wheelFR.motorTorque = 1000f;
+        wheelFL.motorTorque = 800f;
+        wheelFR.motorTorque = 800f;
     }
 
     private void FollowWaypoint()
     {
-        if (Vector3.Distance(transform.position, nodes[currentNode].position) < 10f)
+        if (Vector3.Distance(transform.position, updatenodes[currentNode].position) < 10f)
         {
-            if (currentNode == nodes.Count - 1)
+            if (currentNode == updatenodes.Count - 1)
             {
                 currentNode = 0;
             }
