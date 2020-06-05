@@ -71,12 +71,12 @@
     <Compile Include="Assets\Scripts\FinishLineSc.cs" />
     <Compile Include="Assets\Scripts\LapSwitchScr.cs" />
     <Compile Include="Assets\Scripts\LapTimer.cs" />
+    <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\NewFinishLine.cs" />
     <Compile Include="Assets\Scripts\OffTrack.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\CarController.cs" />
     <Compile Include="Assets\Scripts\Player\WheelsScript.cs" />
-    <Compile Include="Assets\Scripts\WheelRotation.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
