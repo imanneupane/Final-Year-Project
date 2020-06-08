@@ -16,8 +16,15 @@ public class AIscript : MonoBehaviour
     public float maxSpeed = 100f;
     public Vector3 centerOfMass;
 
+    [Header("Sensors")]
+    public float sensorLength = 3f;
+    public Vector3 frontSensor = new Vector3 (0f, 0.2f, 0.5f);
+    public float sideSensor = 0.2f;
+    public float sensorAngle = 20;
+
     private List<Transform> nodes;
     private int currentNode = 0;
+    private bool avoiding = false;
     void Start()
     {
         GetComponent<Rigidbody>().centerOfMass = centerOfMass;
@@ -40,11 +47,13 @@ public class AIscript : MonoBehaviour
         ApplySteer();
         Drive();
         FollowWaypoint();
+        Sensors();
     }
 
     
     private void ApplySteer()
     {
+        if (avoiding) return;
         Vector3 relativeVector = transform.InverseTransformPoint(nodes[currentNode].position);
         float newSteer = (relativeVector.x / relativeVector.magnitude) * maxSteerAngle;
         wheelFL.steerAngle = newSteer;
@@ -81,6 +90,89 @@ public class AIscript : MonoBehaviour
                 currentNode++;
             }
         }
+    }
+
+    private void Sensors()
+    {
+        Vector3 sensorStart = transform.position + frontSensor;
+        sensorStart += transform.forward * frontSensor.z;
+        sensorStart += transform.up * frontSensor.y;
+
+        float avoidMultipler = 0;
+        avoiding = false;
+        //right sensor
+        sensorStart += transform.right * sideSensor;
+        if (Physics.Raycast(sensorStart, transform.forward, out RaycastHit hit, sensorLength))
+        {
+            if (!hit.collider.CompareTag("Track"))
+            {
+                Debug.DrawLine(sensorStart, hit.point);
+                avoiding = true;
+                avoidMultipler -= 1f;
+            }
+        }
+        
+        //rightAngle sensor
+        else if (Physics.Raycast(sensorStart, Quaternion.AngleAxis(sensorAngle, transform.up) * transform.forward, out hit, sensorLength))
+        {
+            if (!hit.collider.CompareTag("Track"))
+            {
+                Debug.DrawLine(sensorStart, hit.point);
+                avoiding = true;
+                avoidMultipler -= 0.5f;
+            }
+        }
+        
+        //left sensor
+        sensorStart -= transform.right * 2 * sideSensor;
+        if (Physics.Raycast(sensorStart, transform.forward, out hit, sensorLength))
+        {
+            if (!hit.collider.CompareTag("Track"))
+            {
+                Debug.DrawLine(sensorStart, hit.point);
+                avoiding = true;
+                avoidMultipler += 1f;
+            }
+        }
+        
+        //leftAngle sensor
+        else if (Physics.Raycast(sensorStart, Quaternion.AngleAxis(-sensorAngle, transform.up) * transform.forward, out hit, sensorLength))
+        {
+            if (!hit.collider.CompareTag("Track"))
+            {
+                Debug.DrawLine(sensorStart, hit.point);
+                avoiding = true;
+                avoidMultipler += 0.5f;
+            }
+        }
+        //Center sensor
+        if (avoidMultipler == 0)
+        {
+            if (Physics.Raycast(sensorStart, transform.forward, out hit, sensorLength))
+            {
+                if (!hit.collider.CompareTag("Track"))
+                {
+                    Debug.DrawLine(sensorStart, hit.point);
+                    avoiding = true;
+                    if(hit.normal.x < 0)
+                    {
+                        avoidMultipler = -1;
+                    }
+                    else
+                    {
+                        avoidMultipler = 1;
+                    }
+                }
+            }
+
+        }
+
+        if (avoiding)
+        {
+            wheelFL.steerAngle = maxSteerAngle * avoidMultipler;
+            wheelFR.steerAngle = maxSteerAngle * avoidMultipler;
+        }
+        
     }
 
 }

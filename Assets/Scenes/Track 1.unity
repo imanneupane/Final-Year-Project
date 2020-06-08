@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 137404147}
   m_Layer: 0
   m_Name: FinishLine
-  m_TagString: Untagged
+  m_TagString: Track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3338,10 +3338,14 @@ MonoBehaviour:
   maxSteerAngle: 90
   wheelFL: {fileID: 818339507}
   wheelFR: {fileID: 1363608510}
-  maxMotorTorque: 800
+  maxMotorTorque: 1200
   currentSpeed: 0
   maxSpeed: 100
   centerOfMass: {x: 0, y: 0, z: 0}
+  sensorLength: 6
+  frontSensor: {x: 0, y: 0.5, z: 0.5}
+  sideSensor: 0.4
+  sensorAngle: 30
 --- !u!138 &515206370
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -5598,7 +5602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 83922672}
-  offset: {x: 0, y: 2.38, z: -5.83}
+  offset: {x: 0, y: 3, z: -5.83}
   smooth: 0.5
 --- !u!1 &965050019
 GameObject:
@@ -6972,6 +6976,10 @@ MonoBehaviour:
   currentSpeed: 0
   maxSpeed: 100
   centerOfMass: {x: 0, y: 0, z: 0}
+  sensorLength: 3
+  frontSensor: {x: 0, y: 0.5, z: 0.5}
+  sideSensor: 0.2
+  sensorAngle: 30
 --- !u!138 &1421969301
 FixedJoint:
   m_ObjectHideFlags: 0
